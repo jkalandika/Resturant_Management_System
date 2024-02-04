@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>e commerce - home</title>
+    
+    <link rel="stylesheet" href="category.css">
+    <link rel="stylesheet" href="home%20style.css">
+    
+
+
+    <style>
+        /* Add this style for the search bar */
+        .search-container {
+            position: absolute;
+            top: 80px;
+            right: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        #foodSearch {
+            padding: 8px;
+            border: none;
+            border-radius: 10px;
+            margin-right: 10px;
+        }
+
+        #foodSearch:focus {
+            outline: none;
+        }
+
+        #foodSearch::placeholder {
+            color: #555;
+        }
+
+        button.search-btn {
+            background-color: #078876;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 8px 12px;
+            cursor: pointer;
+        }
+    </style>
+
+    
+</head>
+<body class="">
+    
+    <div class="container">
+        <header>
+
+       
+
+            <div class="nav container">
+            
+                <a href="index.php" class="logo"><i class='bx bx-home-smile bx-burst' ></i>Food Corner.lk</a>
+                
+                <input type="checkbox" name="" id="menu">
+                <label for="menu"><i class='bx bx-menu' ></i></label>
+        <ul class="navbar">
+            <li><a href="index.php" class="active">Home</a></li>
+            <li><a href="about.html">About Us </a></li>
+            <li><a href="category.html">Category</a></li>
+            <li><a href="contact.php">Contact Us</a></li>
+            <li><a href="user.php">User Account</a></li>
+           
+        </ul>
+       
+            <div class="shopping">
+                <img src="img/shopping.svg">
+                <span class="quantity">0</span>
+            </div>
+            
+            <div class="search-container">
+                <input type="text" id="foodSearch" placeholder="Search for food...">
+                <button class="search-btn" onclick="searchFood()">Search</button>
+            </div>
+
+
+            </div>
+            
+        </header>
+
+
+        <script>
+            function searchFood() {
+                var input, filter, container, boxes, box, title, i;
+                input = document.getElementById("foodSearch");
+                filter = input.value.toUpperCase();
+                container = document.getElementById("category");
+                boxes = container.getElementsByClassName("box");
+    
+                for (i = 0; i < boxes.length; i++) {
+                    box = boxes[i];
+                    title = box.querySelector(".text h3");
+    
+                    if (title.innerText.toUpperCase().indexOf(filter) > -1) {
+                        box.style.display = "";
+                    } else {
+                        box.style.display = "none";
+                    }
+                }
+            }
+        </script>  
+        
+        
+        <div class="list">
+          
+            <div class="box">
+               
+          
+        </div>
+    </div>
+    <div class="card">
+        <h1>Card</h1>
+        <ul class="listCard">
+        </ul>
+        <div class="checkOut">
+            <div class="total">0</div>
+            <div class="closeShopping">Close</div>
+        </div>
+
+       
+<a  id="payButton" class="btn">Pay</a>
+
+
+        
+    </div>
+
+    
+
+ 
+<!--Footer-->
+<section class="footer">
+    <div class="footer-container container">
+        <h2><br><br>Food corner.lk<br></h2>
+        
+        <div class="footer-box">
+            <h3><br><br>Locations</h3>
+            <a href="#"><i class='bx bx-location-plus' ></i> Colombo</a>
+            <a href="#"><i class='bx bx-location-plus' ></i> Baththramulla</a>
+            <a href="#"><i class='bx bx-location-plus' ></i> Mathra</a>
+        </div>
+        <div class="footer-box">
+            <h3><br><br>Contacts</h3>
+            <a href="#"><i class='bx bx-phone-call' ></i>  +94 312 234 476</a>
+            <a href="https://mail.google.com/mail/u/0/?pli=1#inbox?compose=CllgCJfrLfwMrDLmwnPbrFlthmVCwdxMblVGvLnnHwMgfMQkBtmsRndqqmGXtNHwCZJWFhHRrcL"><i class='bx bx-envelope' ></i> foodcorner.lk@gmail.com</a>
+            <div class="social">
+            <a href="https://www.facebook.com"><i class='bx bxl-facebook'></i></a>
+            <a href="https://twitter.com/i/flow/login"><i class='bx bxl-twitter'></i></a>
+            <a href="https://www.instagram.com/accounts/login/"><i class='bx bxl-instagram'></i></a>
+            <a href="#"><i class='bx bx-qr'></i></a> 
+            </div>
+        </div>
+    </div>  
+</section>
+
+<!--copyright-->
+    <div class="copyright">
+        <p>&#169; Food corner.lk All Right Reserved 2023</p>
+    
+    </div>
+    <script src="category.js"></script>
+    </body>
+</html>
