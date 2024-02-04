@@ -1,6 +1,5 @@
 Project Name - E-commerce System(Resturant Management System)
-Student Name - Gunawardana A.P.J.K.V.
-Student Index Number - 21IT0472
+
 
 Develop lanaguage- html, css, javascript, php
 Database - mySql
